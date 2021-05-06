@@ -37,3 +37,19 @@ Sandbox to refine TypeScript
 **INCLUDE FILES**
   - includes select files
     - "files": [" *fileName* "]
+
+
+**OUTDIR LIB**
+  -activating this library will designate where your js files are stored once parsed from the typescript compiler
+
+
+**ROOTDIR LIB**
+  - source folder in which compiler looks to compile ts code
+
+
+**NO EMIT LIB**
+  - when set to true the ts compiler will check for errors but emit js files from the ts files
+
+
+**NO EMIT ON ERROR**
+  - when set to true no files will be emmitted when there when there are errors 
