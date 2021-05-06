@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Sandbox to refine TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pete-Angjelevski/TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pete-Angjelevski/TypeScript/issues"
+  },
+  "homepage": "https://github.com/Pete-Angjelevski/TypeScript#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
