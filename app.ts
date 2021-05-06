@@ -1,31 +1,22 @@
-type StrNum = string | number     // declare global types union variable for simplicity and multiple use 
+function add (n1: number, n2: number): number  {      // can infer expected return type by defining after parameters
+  return n1 + n2
+}
+
+
+function printResult (num: number): void {            // console.log() has return type void - void means does not have return 
+  console.log('result: ' + num)
+}
 
 
 
+printResult(add(5,12))
 
-function combine(
-  input1: number | string,                              // union types 
-  input2: StrNum,                                       // use of combined union variable  
-  resultConversion: 'as-number' | 'as-text') {          // union  + literal types 
-    let result
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {     // if i type resultConverstion === 'as-num' will provide error
-      result = +input1 + +input2
-    } else {
-      result = input1.toString() + input2.toString()
-    } 
 
-    return result
+let combineValues: (a: number, b: number) => number   // we are defining that expected variable will be defined in the future with function with 2 number parameters that returns number
 
-    // if (resultConversion === 'as-number') {
-    //   return Number(result)
-    // } else {
-    //   return result.toString()
-    // }
-  
-  }
-  
-  console.log(combine('pete', 'claudia', 'as-text'))
+combineValues = add                                   // if not defined during let then future reassignment of variable will carry 'any' type
 
-  console.log(combine(10, 1, 'as-number'))
+// combineValues = printResult                        complains as not defined as per above
 
-  console.log(combine('10', '10', 'as-number'))
+
+console.log(combineValues(10, 10))
