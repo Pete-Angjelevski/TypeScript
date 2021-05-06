@@ -67,5 +67,19 @@
     /* Advanced Options */
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "exclude": [
+    "basics.ts",
+    "union-aliases.ts",
+    "unknown-never.ts",
+    "objs-arrays-enum.ts",
+    "functions.ts",
+    "node_modules"
+  ],
+
+  "include": [
+    "app.ts",
+    "analytics.ts"
+  ]
+
 }
