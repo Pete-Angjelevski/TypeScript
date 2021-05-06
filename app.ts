@@ -3,11 +3,22 @@
 //   age: number
 // }  = {              // defines object properties now 
 
-const person = {
+const person: {
+  name: string,
+  age: number,
+  hobbies: string []
+  role: [number, string]  //defined as tuple
+} = {
   name: "Pete",
   age: 30,
-  hobbies: ["MMA", "Movies"]
+  hobbies: ["MMA", "Movies"],
+  role: [2, 'author']
 }
+
+person.role.push('admin')   // push is an exception to tuples 
+
+
+
 
 let favouriteActivities: string []
 favouriteActivities = ['Sport']
