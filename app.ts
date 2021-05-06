@@ -1,6 +1,21 @@
-const person: object  = {
+// const person: {
+//   name: string,
+//   age: number
+// }  = {              // defines object properties now 
+
+const person = {
   name: "Pete",
-  age: 30
+  age: 30,
+  hobbies: ["MMA", "Movies"]
 }
 
-console.log(person.name) // infers that there is no nickname property within person object
+let favouriteActivities: string []
+favouriteActivities = ['Sport']
+
+
+console.log(person.name) 
+
+for( const hobby of person.hobbies) {
+  console.log('Hobbies: ', hobby)
+  console.log(hobby.map()) // pre-emptively shows unabilty to map as there are no arrays to map over
+}
